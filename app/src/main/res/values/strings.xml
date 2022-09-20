@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Google Map</string>
+    <string name="starting_point">Starting Point</string>
+    <string name="end_point">End point</string>
+    <string name="find_route">Find Route</string>
+    <string name="google_maps_key">AIzaSyD81g_QuhjM0t7WFzvfaY0YW-quZ-YYmgM</string>
+    <string name="password">Password</string>
+    <string name="email_or_password">Email or Password</string>
+    <string name="don_t_have_an_account_pls_register_here">Don\'t have an account pls <u>Register here</u></string>
+    <string name="show_notification">show notification</string>
+    <!--
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD81g_QuhjM0t7WFzvfaY0YW-quZ-YYmgM</string>
+-->
+</resources>
