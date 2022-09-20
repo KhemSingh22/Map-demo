@@ -15,7 +15,7 @@ import com.example.googlemap.utils.MyWork
 import java.util.concurrent.TimeUnit
 
 class WorkActivity : AppCompatActivity() {
-
+// work demo like whatsappp
     @SuppressLint("EnqueueWork")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
