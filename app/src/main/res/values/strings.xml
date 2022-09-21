@@ -8,6 +8,17 @@
     <string name="email_or_password">Email or Password</string>
     <string name="don_t_have_an_account_pls_register_here">Don\'t have an account pls <u>Register here</u></string>
     <string name="show_notification">show notification</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="save">Save</string>
+    <string name="profile">Profile</string>
+    <string name="next_screen">Next Screen</string>
+    <string name="home_screen">Home Screen</string>
+    <string name="profile_to_save">Profile to save</string>
+    <string name="profile_to_home">profile to Home</string>
+    <string name="go_to_profile">Go to Profile</string>
+    <string name="go_to_saved">Go to Saved</string>
     <!--
     <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyD81g_QuhjM0t7WFzvfaY0YW-quZ-YYmgM</string>
 -->

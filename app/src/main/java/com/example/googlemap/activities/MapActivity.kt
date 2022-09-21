@@ -29,8 +29,8 @@ import com.google.android.libraries.places.widget.AutocompleteActivity
 import com.google.android.libraries.places.widget.model.AutocompleteActivityMode
 import com.google.common.reflect.TypeToken
 import com.google.gson.Gson
-import com.squareup.okhttp.OkHttpClient
-import com.squareup.okhttp.Request
+import okhttp3.OkHttpClient
+import okhttp3.Request
 import java.io.InputStream
 import java.io.InputStreamReader
 import java.io.Reader
@@ -231,7 +231,7 @@ class MapActivity : FragmentActivity(), OnMapReadyCallback {
             val request = Request.Builder().url(url).build()
             val response = client.newCall(request).execute()
             // val data = response.body().toString()
-            val data = isToString(response.body().byteStream())
+            val data = isToString(response.body()!!.byteStream())
 
             val result = ArrayList<List<LatLng>>()
             Log.e("SAAAAAAS", "Working Fine......1  " + data)

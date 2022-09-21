@@ -25,7 +25,7 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
     var loginResponse = MutableLiveData<LoginResponse>()
     var error = MutableLiveData<String>()
 
-    fun login(view: View) {
+    fun login(view : View) {
         if (Email_phone.get().isNullOrEmpty() || pass.get().toString().isEmpty()) {
             Toast.makeText(
                 getApplication(),
@@ -38,6 +38,12 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
                 bodyData = LoginRepo().login(Email_phone.get().toString(), pass.get().toString())
                 if (bodyData.isSuccessful) {
                     loginResponse.value = bodyData.body()
+                }else{
+                    Toast.makeText(
+                        getApplication(),
+                        "Server error ",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             }
 

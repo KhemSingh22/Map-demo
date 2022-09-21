@@ -8,6 +8,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.ui.setupWithNavController
 import androidx.work.*
 import com.example.googlemap.R
 import com.example.googlemap.databinding.ActivityWorkBinding
@@ -15,16 +19,23 @@ import com.example.googlemap.utils.MyWork
 import java.util.concurrent.TimeUnit
 
 class WorkActivity : AppCompatActivity() {
-// work demo like whatsappp
+
+    private lateinit var navController: NavController
+
     @SuppressLint("EnqueueWork")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_work)
+//        setContentView(R.layout.activity_work)
 
-        val binding: ActivityWorkBinding =
-            DataBindingUtil.setContentView(this, R.layout.activity_work)
+        val binding : ActivityWorkBinding = DataBindingUtil.setContentView(this,R.layout.activity_work)
+        navController = Navigation.findNavController(this, R.id.activity_main_nav_host_fragment)
+        binding.activityMainBottomNavigationView.setupWithNavController(navController)
 
-        val constraints = Constraints.Builder()
+        NavigationUI.setupActionBarWithNavController(this, navController)
+
+
+
+     /*   val constraints = Constraints.Builder()
             .setRequiresCharging(true)
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .setRequiresBatteryNotLow(true)
@@ -46,7 +57,7 @@ class WorkActivity : AppCompatActivity() {
                 val data_ID = it.state.name
                 Log.e("SSSSS", it.state.toString())
                 Toast.makeText(this, data_ID, Toast.LENGTH_SHORT).show()
-            })
+            })*/
     }
 
 }

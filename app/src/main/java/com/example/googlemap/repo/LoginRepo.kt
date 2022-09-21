@@ -1,6 +1,4 @@
 package com.example.googlemap.repo
-
-import androidx.lifecycle.MutableLiveData
 import com.example.googlemap.loginResponse.LoginResponse
 import com.example.googlemap.network.RetrofitClient
 import com.example.googlemap.network.RetrofitService
@@ -9,7 +7,6 @@ import retrofit2.Response
 class LoginRepo() {
 
     private var api = RetrofitClient.getService().create(RetrofitService::class.java)
-
     suspend fun login(emailPhone: String, pasword: String): Response<LoginResponse> {
 
         return api!!.loginUser(emailPhone, pasword, "", "android")
